@@ -706,7 +706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593722866}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16490315, y: -0.000000016970828, z: 0.0000000028373877, w: 0.98630977}
+  m_LocalRotation: {x: 0.16490313, y: 0.000000016970818, z: -0.0000000028373852, w: 0.98630977}
   m_LocalPosition: {x: 9.1, y: 4.68, z: 75.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1036,7 +1036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069125937}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16490315, y: -0.000000016970828, z: 0.0000000028373877, w: 0.98630977}
+  m_LocalRotation: {x: 0.16490313, y: 0.000000016970818, z: -0.0000000028373852, w: 0.98630977}
   m_LocalPosition: {x: 9.1, y: 4.68, z: 75.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1704,7 +1704,7 @@ PrefabInstance:
     - target: {fileID: 541216873361521881, guid: e3ce484c2cc072345ace6438f608bb37,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 50.05
       objectReference: {fileID: 0}
     - target: {fileID: 541216873361521881, guid: e3ce484c2cc072345ace6438f608bb37,
         type: 3}
@@ -1714,7 +1714,7 @@ PrefabInstance:
     - target: {fileID: 541216873361521881, guid: e3ce484c2cc072345ace6438f608bb37,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 50
+      value: 47.61
       objectReference: {fileID: 0}
     - target: {fileID: 541216873361521881, guid: e3ce484c2cc072345ace6438f608bb37,
         type: 3}
@@ -1914,6 +1914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705394686004102780, guid: ef29eaf8091e9a9498ebf7488ec1abdb,
         type: 3}
+      propertyPath: weight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705394686004102780, guid: ef29eaf8091e9a9498ebf7488ec1abdb,
+        type: 3}
       propertyPath: obstacleLayer.m_Bits
       value: 72
       objectReference: {fileID: 0}
@@ -1939,6 +1944,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: John
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113220712969619602, guid: 5de17f268ff9b0a48946e51bfe8c2f6c,
+        type: 3}
+      propertyPath: weight
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6113220712969619602, guid: 5de17f268ff9b0a48946e51bfe8c2f6c,
         type: 3}
@@ -2015,6 +2025,11 @@ PrefabInstance:
       objectReference: {fileID: 1900124162}
     - target: {fileID: 1723707630198201845, guid: e83840a2c80135148af7d409358f23f0,
         type: 3}
+      propertyPath: weight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723707630198201845, guid: e83840a2c80135148af7d409358f23f0,
+        type: 3}
       propertyPath: obstacleLayer.m_Bits
       value: 72
       objectReference: {fileID: 0}
@@ -2073,6 +2088,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5402430179360128850, guid: e83840a2c80135148af7d409358f23f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2086,6 +2106,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 846910440445160334, guid: 7087de1bf8f8b2b4a91f0e8176c64ceb,
+        type: 3}
+      propertyPath: m_PreserveTreePrototypeLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1512287281463943446, guid: 7087de1bf8f8b2b4a91f0e8176c64ceb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2154,6 +2179,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1182172263}
     m_Modifications:
+    - target: {fileID: 985647367896605237, guid: deed5d7fbf4127349b702e244f19bfe0,
+        type: 3}
+      propertyPath: weight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 985647367896605237, guid: deed5d7fbf4127349b702e244f19bfe0,
         type: 3}
       propertyPath: obstacleLayer.m_Bits
