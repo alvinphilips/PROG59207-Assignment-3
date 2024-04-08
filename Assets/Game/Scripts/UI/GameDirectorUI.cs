@@ -42,7 +42,7 @@ namespace Game.Scripts.UI
 
         private void UpdateVirtualCamera(int newIndex)
         {
-            if (newIndex < 0) newIndex = steeringAgents.Count;
+            if (newIndex < 0) newIndex = steeringAgents.Count - 1;
 
             _currentAgentIndex = newIndex % steeringAgents.Count;
             
