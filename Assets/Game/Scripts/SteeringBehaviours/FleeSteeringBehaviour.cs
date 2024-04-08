@@ -5,6 +5,7 @@ namespace Game.Scripts.SteeringBehaviours
 {
     public class FleeSteeringBehaviour: SeekSteeringBehaviour
     {
+        [Header("Flee Behaviour")]
         [SerializeField] private Transform enemy;
         [SerializeField] private float fleeDistance = 5f;
         

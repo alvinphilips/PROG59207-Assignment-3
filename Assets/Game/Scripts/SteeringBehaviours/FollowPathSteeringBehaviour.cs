@@ -5,9 +5,30 @@ namespace Game.Scripts.SteeringBehaviours
 {
     public class FollowPathSteeringBehaviour: ArriveSteeringBehaviour
     {
+        [Header("Follow Path Behaviour")]
         [SerializeField] protected float ehCloseEnoughDistance = 0.5f;
+        [SerializeField] private bool generateWaypointsFromChildren = true;
+        [SerializeField] private Transform waypointsParent; 
+        [SerializeField] protected List<Transform> waypoints = new();
         
-        protected readonly Queue<Vector3> QueuedPoints = new();
+        protected Queue<Vector3> QueuedPoints = new();
+
+        protected virtual void Start()
+        {
+            if (!generateWaypointsFromChildren) return;
+            
+            // If no waypointsParent was provided, use the current Transform
+            if (waypointsParent == null)
+            {
+                waypointsParent = transform;
+            }
+            
+            waypoints.Clear();
+            for (var i = 0; i < waypointsParent.childCount; i++)
+            {
+                waypoints.Add(waypointsParent.GetChild(i));
+            }
+        }
 
         public override Vector3 CalculateForce()
         {
@@ -35,9 +56,9 @@ namespace Game.Scripts.SteeringBehaviours
 
         protected virtual void RefreshQueue()
         {
-            for (var i = 0; i < transform.childCount; i++)
+            foreach (var waypoint in waypoints)
             {
-                QueuedPoints.Enqueue(transform.GetChild(i).position);
+                QueuedPoints.Enqueue(waypoint.position);
             }
         }
 
@@ -45,6 +66,12 @@ namespace Game.Scripts.SteeringBehaviours
         {
             base.OnDrawGizmos();
             var startPoint = transform.position;
+
+            if (QueuedPoints == null)
+            {
+                return;
+            }
+            
             foreach (var point in QueuedPoints)
             {
                 Debug.DrawLine(startPoint, point, Color.black);

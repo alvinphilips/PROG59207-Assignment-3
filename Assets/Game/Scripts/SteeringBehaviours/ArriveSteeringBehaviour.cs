@@ -5,6 +5,7 @@ namespace Game.Scripts.SteeringBehaviours
 {
     public class ArriveSteeringBehaviour: SeekSteeringBehaviour
     {
+        [Header("Arrive Behaviour")]
         [SerializeField] protected float slowdownDistance = 2f;
         [SerializeField] protected float stoppingDistance = 0.1f;
 

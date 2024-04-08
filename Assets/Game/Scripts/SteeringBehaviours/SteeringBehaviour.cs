@@ -5,13 +5,20 @@ namespace Game.Scripts.SteeringBehaviours
 {
     public abstract class SteeringBehaviour : MonoBehaviour
     {
+        [Header("Steering Behaviour")]
         [SerializeField] protected float weight = 1f;
+        public bool useMouseInput = true;
+
         public float Weight { get => weight; set => weight = value; }
         public Vector3 Target { get; set; } = Vector3.zero;
 
-        public bool useMouseInput = true;
-
         [HideInInspector] public SteeringAgent steeringAgent;
+
+        private void Awake()
+        {
+            // TODO: Perhaps basing all our logic on the position of the SteeringBehaviour should be a conscious choice?
+            transform.localPosition = Vector3.zero;
+        }
 
         protected bool CheckMouseInput()
         {
